@@ -258,7 +258,7 @@ Grjasowez LOC 13 14
 Just by looking at the text and the relationships between words, the model is able to correctly identify that Karl-Heinz Quade is a person (PER) and that Grjasowez is a place (LOC). Named entity recognition is a powerful tool for finding places, people and organizations in text.  You will encounter machine errors, so it's important to review the results and to correct errors.  With Matcher, you will not get these mistakes, but you also won't find places that are not in the gazetteer. 
 
 ## Displacy
-To see your results in the context of the text, spaCy includes a useful tool called displacy.  It will  thie an image of the text and the predictions which can be very useful when assessing whether the results will be helpful to your research or introduce too many machine errors to be helpful. spaCy also offers a [web application](https://explosion.ai/demos/displacy-ent) that lets you quickly assess predictions. Visualizations can be created both in Python script or in a running [Jupyter notebook](https://programminghistorian.org/en/lessons/jupyter-notebooks). 
+To see your results in the context of the text, spaCy includes a useful tool called displacy.  It will  thie an image of the text and the predictions which can be very useful when assessing whether the results will be helpful to your research or introduce too many machine errors to be helpful. spaCy also offers a [web application](https://explosion.ai/demos/displacy-ent) that lets you quickly assess predictions. Visualizations can be created both in Python script or in a running [Jupyter notebook](https://programminghistorian.org/en/lessons/jupyter-notebooks). See the below image for an example visualization produced by displacy.
 
 **python script**
 ```python 
@@ -274,7 +274,7 @@ displacy.serve(doc, style="ent")
 ```python
 displacy.render(doc, jupyter=True, style="ent")
 ```
-With statistical models, you can also use displacy to create an useful visualization of the relationships between words in the text. Just use `style='dep'` To generate this visualization.
+With statistical models, you can also use displacy to create an useful visualization of the relationships between words in the text. Just use `style='dep'` To generate this visualization. The image below gives an example of the dependency visualization created by displacy. 
 
 ```python 
 displacy.render(doc, jupyter=True, style="dep")
@@ -362,12 +362,12 @@ print('created: ', filename)
 ## 6. Uploading to the World Historical Gazetteer
 Now that we have a Linked Places TSV, we will upload it to the [World Historical Gazetteer (WHG)](http://whgazetteer.org/). The WHG is a fully web based application. It indexes place references drawn from historical sources, adding temporal depth to a core of approximately 1.8 million modern records. This is especially useful for places whose names have changed over time. By using the WHG, users can upload their data and rapidly find the coordinates of historical places. As mentioned in the gazetteer section above, this service provides automatic geocoding that is suitable for use with historical data. Many common geocoding services such as Google Maps or those behind a paywall barrier such as through ArcGIS are unsuitable for historical research as they are based primarily upon 21st century information. They rarely support historical name information beyond the most common instances. Additionally, the WHG also supports a multitude of languages. Finally, geocoding and basic mapping are achievable through a graphical user interface. This circumnavigates the need to use a script, to trace layers from maps in a different program, or create relational databases and table joins in GIS software.
 
-The WHG is free to use. To get started, register for an account and then sign in. 
+The WHG is free to use. To get started, register for an account and then sign in. As the image below illustrates, you need to click on the "Register" button located in the top right corner of the homepage. 
 
 {% include figure.html filename="FINDING-PLACES-WORLD-HISTORICAL-GAZETTEER2.JPG" caption="Figure 2: Register" %}
 
 
-After registering and logging in, you will be taken to the “Datasets” tab. Press “add new” to upload your Linked Pasts TSV to the WHG. 
+After registering and logging in, you will be taken to the “Datasets” tab. Press “add new” to upload your Linked Pasts TSV to the WHG. The image below shows the placement of the "add new" button on the "Datasets" page.
 
 {% include figure.html filename="FINDING-PLACES-WORLD-HISTORICAL-GAZETTEER3.JPG" caption="Figure 3: Add Data" %}
 
@@ -377,16 +377,16 @@ Insert a title, such as “POW Memoir Places,” and a brief description. Do not
 {% include figure.html filename="FINDING-PLACES-WORLD-HISTORICAL-GAZETTEER4.JPG" caption="Figure 4: Adding Data" %}
 
 
-Once the dataset is successfully uploaded, you can begin what is known as the reconciliation process. Back on the “Data” tab, click on the TSV you uploaded. This will take you to a new screen to initially view the dataset’s metadata. Click on the “Reconciliation” tab at the top of this page. Reconciliation is the process of linking your TSV entries to the database of named place entities and their additional relations in the WHG. On the “Reconciliation” tab, press the “add new task” button. 
+Once the dataset is successfully uploaded, you can begin what is known as the reconciliation process. Back on the “Data” tab, click on the TSV you uploaded. This will take you to a new screen to initially view the dataset’s metadata. Click on the “Reconciliation” tab at the top of this page. Reconciliation is the process of linking your TSV entries to the database of named place entities and their additional relations in the WHG. On the “Reconciliation” tab, press the “add new task” button as illustrated in the image below.  
 
 {% include figure.html filename="FINDING-PLACES-WORLD-HISTORICAL-GAZETTEER5.JPG" caption="Figure 5: Starting Reconciliation Part 1" %}
 
 
-You currently have the option to reconcile your data with Getty TGN or Wikidata. Select Wikidata and press start. If you want to limit the geographical area of your results, apply a geographic constraint filter before pressing start. If none of the pre-defined regions are acceptable, you can create your own user area to fine tune the results given in the reconciliation process.
+You currently have the option to reconcile your data with Getty TGN or Wikidata. Select Wikidata and press start. If you want to limit the geographical area of your results, apply a geographic constraint filter before pressing start. If none of the pre-defined regions are acceptable, you can create your own user area to fine tune the results given in the reconciliation process. The image below shows the options that you can choose for this process.
 
 {% include figure.html filename="FINDING-PLACES-WORLD-HISTORICAL-GAZETTEER6.JPG" caption="Figure 6: Starting Reconciliation Part 2" %}
 
-After pressing Start, you will be returned to the main “Reconciliation” tab. The process will run for a while and you will receive an email when the process is complete. You can also refresh the screen every few seconds to see if it is done. When it is done, you will be told how many locations need to be reviewed for each pass of the reconciliation process. In this case we will see that of our 133 records, 126 got hits. We now have to do a manual review of the hits to see if they are correct. Press the “Review” button next to "Pass 1" to begin the review.
+After pressing Start, you will be returned to the main “Reconciliation” tab. The process will run for a while and you will receive an email when the process is complete. You can also refresh the screen every few seconds to see if it is done. When it is done, you will be told how many locations need to be reviewed for each pass of the reconciliation process. In this case we will see that of our 133 records, 126 got hits. We now have to do a manual review of the hits to see if they are correct. Press the “Review” button next to "Pass 1" to begin the review. The image below shows how many items there are to review in how many passes. Click where indicated in the image to begin the manual review process. 
 
 {% include figure.html filename="FINDING-PLACES-WORLD-HISTORICAL-GAZETTEER7.JPG" caption="Figure 7: Starting Reconciliation Part 3" %}
 
@@ -394,19 +394,19 @@ You will be taken to a new screen that asks you to match your record with record
 
 >>> The more information you put into the LP-TSV format, such as country codes, the easier it will be to make these matches. The associated information from the LP-TSV upload will appear on the left hand side of the reconciliation screen to help you understand all of the information provided on the right hand side. If you are building your own dataset, it is worth taking the time to add a country codes (ccodes) column into the file you upload as well as aat type with the corresponding type (e.g. settlement, state, country).
 
-Given the bare bones nature of this upload, it will be a little harder to make these matches. All of the results should come from the countries that made up the Soviet Union: Russia, Ukraine, Belarus, Estonia, Latvia, Lithuania, Moldova, Armenia, Azerbaijan, Georgia, Uzbekistan, Kazakhstan, Kyrgyzstan, Tajikistan, and Turkmenistan. To see this in action, let's start the reconciliation process. Our first review is for Jelabuga. It is indeed a close match for Yelabuga, which we can tell by a variant of Yelabuga being listed as "Jelabuga@de," confirming that Jelabuga is the German language variant of Yelabuga. We will select "closeMatch" and then "save," which will advance us to the next item for review. 
+Given the bare bones nature of this upload, it will be a little harder to make these matches. All of the results should come from the countries that made up the Soviet Union: Russia, Ukraine, Belarus, Estonia, Latvia, Lithuania, Moldova, Armenia, Azerbaijan, Georgia, Uzbekistan, Kazakhstan, Kyrgyzstan, Tajikistan, and Turkmenistan. To see this in action, let's start the reconciliation process. Our first review is for Jelabuga. It is indeed a close match for Yelabuga, which we can tell by a variant of Yelabuga being listed as "Jelabuga@de," confirming that Jelabuga is the German language variant of Yelabuga. We will select "closeMatch" and then "save," which will advance us to the next item for review. Figure 8 below shows where to look for information to determine whether it is a close match or no match. The red box highlights the radio buttons for choosing the type of match as well as the save button to save the choice and advance to the next location for review.
 
 {% include figure.html filename="FINDING-PLACES-WORLD-HISTORICAL-GAZETTEER8.JPG" caption="Figure 8: closeMatch" %}
 
 
-The next location for review is Keller. We can tell that this example is no match because the suggested match is in Italy. As our data only concerns places in the USSR, we can save no match and quickly move on. Note that if you realize you made a mistake, you can go back one previous save by pressing the "Undo last save" button on the top left of the Reconciliation Review" screen.
+The next location for review is Keller. We can tell that this example is no match because the suggested match is in Italy, as shown in the image below. As our data only concerns places in the USSR, we can save no match and quickly move on. Note that if you realize you made a mistake, you can go back one previous save by pressing the "Undo last save" button on the top left of the Reconciliation Review" screen.
 
 {% include figure.html filename="FINDING-PLACES-WORLD-HISTORICAL-GAZETTEER9.JPG" caption="Figure 9: No Match" %}
 
 
 Go ahead an finish the review of the remaining 23 records for Pass 1. As a hint, out of the 25 places for Pass 1 reconciliation, only Yelabuga, Kupjansk, Atkarsk, Makejewka, Kokand, Selenodolsk, Merefa, Usa [Belarus], Wjasma, Fastow,and Owrutsch are close matches.
 
-Once you complete review of Pass 1, you are automatically taken to complete review of Pass 2. For now, go back to the Data button on the top right corner of the screen to return to your data tab. Click on your "POW Memoir Places" dataset again to go to its metadata page. If you click on the "Browse" tab next to the "Metadata" tab, you will now see that there are geometries for the places we decided were close matches. These places now appear on the map preview.
+Once you complete review of Pass 1, you are automatically taken to complete review of Pass 2. For now, go back to the Data button on the top right corner of the screen to return to your data tab. Click on your "POW Memoir Places" dataset again to go to its metadata page. If you click on the "Browse" tab next to the "Metadata" tab, you will now see that there are geometries for the places we decided were close matches. These places now appear on the map preview, as illustrated in the image below.
 
 {% include figure.html filename="FINDING-PLACES-WORLD-HISTORICAL-GAZETTEER10.JPG" caption="Figure 10: Map Preview" %}
 
@@ -416,13 +416,13 @@ If you click on the "Reconciliation" tab again, you can click on review next two
 {% include figure.html filename="FINDING-PLACES-WORLD-HISTORICAL-GAZETTEER11.JPG" caption="Figure 11: Full Map" %}
 
 
-If you wish to download an image file of the map, you can do so by hovering over the download symbol in the top left corner of the map preview and then sliding your mouse over to the arrows that appear showing "download current size."
+If you wish to download an image file of the map, you can do so by hovering over the download symbol in the top left corner of the map preview and then sliding your mouse over to the arrows that appear showing "download current size." The red box in the image below highlights a download button. Click on the download symbol to save an image file of the map generated by the WHG. 
 
 {% include figure.html filename="FINDING-PLACES-WORLD-HISTORICAL-GAZETTEER12.PNG" caption="Figure 12: Map Download" %}
 
 
 ## 7. Future Mapping Work and Suggested Further Lessons
-The reconciliation process will not only give you a static map, but it was also give you an augmented dataset to download. This augmented file will include the latitude and longitude coordinates for your close matches. You can download the augmented file from the dataset's Metadata tab. In th bottom right hand corner, there is a box that says "Downloads" and you can choose either the Linked Placed format GeoJSON file or a TSV.
+The reconciliation process will not only give you a static map, but it was also give you an augmented dataset to download. This augmented file will include the latitude and longitude coordinates for your close matches. You can download the augmented file from the dataset's Metadata tab. In th bottom right hand corner, there is a box that says "Downloads" and you can choose either the Linked Placed format GeoJSON file or a TSV. The red box in the image below shows where to click to donwload the augmented dataset in either of the two formats.
 
 {% include figure.html filename="FINDING-PLACES-WORLD-HISTORICAL-GAZETTEER13.JPG" caption="Figure 13: Augmented Data" %}
 
