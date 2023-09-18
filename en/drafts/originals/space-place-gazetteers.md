@@ -118,9 +118,7 @@ We also should add a column for the ISO code for the modern country where this l
 
 {% include figure.html filename="or-en-space-place-gazetteers-05.JPG" alt="Visual description of figure image" caption="Figure 5. Spreadsheet with space for geographic information" %}
 
-Where do we go to get the information about modern names for the places? There are a multitude of options for this work, but the easiest to use is the [World Historical Gazetteer (WHG) website](https://whgazetteer.org), a project which works to reconcile as many historic place names as possible around the globe with modern ones across a multitude of languages and alphabets. Navigate to the website and press the "Explore open access, historical place data" button to be taken to a search window.
-
-{% include figure.html filename="or-en-space-place-gazetteers-06.JPG" alt="Visual description of figure image" caption="Figure 6. World Historical Gazetteer Navigation" %}
+Where do we go to get the information about modern names for the places? There are a multitude of options for this work, but the easiest to use is the [World Historical Gazetteer (WHG) website](https://whgazetteer.org), a project which works to reconcile as many historic place names as possible around the globe with modern ones across a multitude of languages and alphabets. Navigate to the website and press the "Explore open access, historical place data" button to be taken to a search window, or [click here to open the search window](https://whgazetteer.org/search/).
 
 With the search interface now activated, let’s start with our first location, Tudela. The WHG gives us a few options. We know that Benjamin of Tudela is a Spanish traveler, so the second option of Tudela in ES for Spain is the one we want. We will click on this record to get a new window to open.
 
