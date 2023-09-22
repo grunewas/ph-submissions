@@ -147,18 +147,19 @@ The second paragraph of the travelogue clues us into another important column: n
 
 If you have typed in the information yourself thus far, you spreadsheet should look like the below table.
 
-| ID | TravelStop | AltName         | Source          | AttestedDate    | PlaceType       | aat_type  | JewishPop                          | DescJewishPop                                                                       |
-| -- | ---------- | --------------- | --------------- | --------------- | --------------- | --------- | ---------------------------------- | ----------------------------------------------------------------------------------- |
-| 1  | Tudela     |                 | ItineraryTudela | 1170            | inhabited place | 300008347 | NA                                 |                                                                                     |
-| 2  | Saragossa  |                 | ItineraryTudela | 1170            | inhabited place | 300008347 | NA                                 |                                                                                     |
-| 3  | Tortosa    |                 | ItineraryTudela | 1170            | inhabited place | 300008347 | NA                                 |                                                                                     |
-| 4  | Tarragona  | ItineraryTudela | 1170            | inhabited place | 300008347       | NA        |                                    |
-| 5  | Barcelona  | ItineraryTudela | 1170            | inhabited place | 300008347       | Y         | holy congregation; sages; 4 rabbis |
-| 6  | Gerona     |                 | ItineraryTudela | 1170            | inhabited place | 300008347 | Y                                  | small congregation                                                                  |
-| 7  | Narbonne   |                 | ItineraryTudela | 1170            | inhabited place | 300008347 | Y                                  | learning center; Torah; sages; 4 rabbis; distinguished schoars; 300 Jews            |
-| 8  | Beziers    |                 | ItineraryTudela | 1170            | inhabited place | 300008347 | Y                                  | congreation; rabbis                                                                 |
-| 9  | Har Gaash  | Montpellier     | ItineraryTudela | 1170            | inhabited place | 300008347 | Y                                  | scholars; rabbis; learning centers; Talmud                                          |
-| 10 | Lunel      |                 | ItineraryTudela | 1170            | inhabited place | 300008347 | Y                                  | congretation; Israelites; learning centers; law; rabbis; Talmud; Sephardi; 300 Jews |
+|ID|TravelStop|AltName|Source|AttestedDate|PlaceType|aat_type|JewishPop|DescJewishPop|
+|:----|:----|:----|:----|:----|:----|:----|:----|:----|
+|1|Tudela| |ItineraryTudela|1170|inhabited place|300008347|NA| |
+|2|Saragossa| |ItineraryTudela|1170|inhabited place|300008347|NA| |
+|3|Tortosa| |ItineraryTudela|1170|inhabited place|300008347|NA| |
+|4|Tarragona| |ItineraryTudela|1170|inhabited place|300008347|NA| |
+|5|Barcelona| |ItineraryTudela|1170|inhabited place|300008347|Y|holy congregation; sages; 4 rabbis|
+|6|Gerona| |ItineraryTudela|1170|inhabited place|300008347|Y|small congregation|
+|7|Narbonne| |ItineraryTudela|1170|inhabited place|300008347|Y|learning center; Torah; sages; 4 rabbis; distinguished schoars; 300 Jews|
+|8|Beziers| |ItineraryTudela|1170|inhabited place|300008347|Y|congreation; rabbis|
+|9|Har Gaash|Montpellier|ItineraryTudela|1170|inhabited place|300008347|Y|scholars; rabbis; learning centers; Talmud|
+|10|Lunel| |ItineraryTudela|1170|inhabited place|300008347|Y|congretation; Israelites; learning centers; law; rabbis; Talmud; Sephardi; 300 Jews|
+
 
 We could continue to build this gazetteer out for the rest of the text, and we would probably generate more research questions and data points to analyze. Even with what we have processed so far, we have information about Jewish history in the 12th century that is now connected to space and place. Those who compile data such as this might also want to map the data. This then brings one of the greatest challenges of historical-spatial research, taking historic names and mapping them with modern software. Major mapping software providers like Google Maps tend to have major name changes saved in their software, such as Stalingrad/Volgograd or Bombay/Mumbai, but these programs often lack more obscure historic names. With respect to our dataset, Tudela is there because the name has not changed. Google Maps also knows that Saragossa is an alternative spelling for Zaragoza, which is how the name appears on the map. Without Google doing this reconciliation for us, we might not know this to be the same place. Thus, we need to add new columns into our spreadsheet, one for modern names, and ones for latitude and longitude, to make mapping this information easier. Create the following columns, "ModName," "Latitude," and "Longitude."
 
